@@ -488,7 +488,7 @@ public:
         // SQL aborts the whole worldserver boot (see mod-guild-tax for the
         // same convention), so the table is created programmatically here
         // and tolerated at runtime instead.
-        CharacterDatabase.Execute(
+        CharacterDatabase.DirectExecute(
             "CREATE TABLE IF NOT EXISTS `forever_bank` ("
             "`id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT, "
             "`owner_guid` INT UNSIGNED NOT NULL, "
