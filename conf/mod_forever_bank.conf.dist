@@ -1,0 +1,38 @@
+[worldserver]
+
+########################################
+# mod-forever-bank configuration
+########################################
+#
+# The 3.3.5a client bank is hard-capped at 28 slots + 7 bags. This module
+# adds EXTRA storage through a gossip NPC "Forever Vault" (creature_template
+# entry 9000100, see data/sql/db-world/updates/mod_forever_bank_2026_09_22_00.sql):
+# a player deposits/withdraws items that are held in the `forever_bank` table
+# instead of any live inventory slot. Deposited items keep their real
+# item_instance row (enchants/durability/charges survive a round trip).
+#
+
+#
+#    ForeverBank.Enable
+#        Master on/off switch for this module. 0 = the NPC exists but tells
+#        the player the vault is closed; no deposits/withdrawals happen.
+#        Default: 1
+#
+ForeverBank.Enable = 1
+
+#
+#    ForeverBank.MaxSlots
+#        Maximum number of items a single vault (see ForeverBank.PerAccount)
+#        may hold at once. A deposit is refused once this cap is reached.
+#        Default: 200
+#
+ForeverBank.MaxSlots = 200
+
+#
+#    ForeverBank.PerAccount
+#        0 = each character has its own vault (owner_guid = character GUID).
+#        1 = every character on the account shares one vault (owner_guid =
+#            account id).
+#        Default: 0
+#
+ForeverBank.PerAccount = 0
