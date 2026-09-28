@@ -1,5 +1,10 @@
 # mod-forever-bank
 
+<!-- links:start -->
+[![Support me on Ko-fi](https://malura.de/assets/badge/kofi.svg)](https://malura.de/go/kofi?ref=mod-forever-bank)
+[![Check out my page](https://malura.de/assets/badge/malura.svg)](https://malura.de/go/site?ref=mod-forever-bank)
+<!-- links:end -->
+
 An [AzerothCore](https://www.azerothcore.org/) module (WotLK 3.3.5a) that adds extra item
 storage through a gossip NPC — a "vault" beyond the client's fixed bank size.
 
